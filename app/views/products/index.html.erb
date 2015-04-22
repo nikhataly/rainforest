@@ -5,6 +5,6 @@
 <%= link_to "New Product", "/products/new" %>
 
 <% @products.each do |product| %>
-  <p><%= product.name %>, <%= product.description %>, <%= product.formatted_price %></p>
+  <p><%= link_to product.name, product_path(product) %>, <%= product.description %>, <%= product.formatted_price %></p>
 <% end %>
 
