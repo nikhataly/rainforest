@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
       Product.all
     end
 
+    # binding.pry
     if request.xhr?
       render @products
     end
