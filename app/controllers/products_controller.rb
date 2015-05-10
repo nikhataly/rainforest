@@ -7,8 +7,9 @@ class ProductsController < ApplicationController
     end
 
     # binding.pry
-    if request.xhr?
-      render @products
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
