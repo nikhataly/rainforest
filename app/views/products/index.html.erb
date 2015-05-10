@@ -10,6 +10,7 @@
 <br>
 <br>
 
+<h1><small><%= page_entries_info @products %></small></h1>
 
 <%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
   <%= text_field_tag :search, params[:search] %>
@@ -26,6 +27,8 @@
     <%#= render @products %>
     <%= render partial: "product", locals: {product: product} %>
   <% end %>
+
+<%= paginate @products %>
 
 </div>
 
